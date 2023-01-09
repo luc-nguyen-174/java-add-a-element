@@ -13,14 +13,14 @@ public class Main {
         System.out.print("Nhập vào vị trí: ");
         int index = scanner.nextInt();
 
-        if ((index < 0) && (index > (defaultArray.length))) {
-            System.out.println("Không chèn được phần tử vào mảng!!!");
+        if ((index < 0) || (index > (defaultArray.length))) {
+            System.out.println("Không chèn được phần tử vào vị trí vừa nhập, mời nhập lại!!!");
         } else {
             for (int i = defaultArray.length-1; i>=index; i--) {
                 defaultArray[i] =defaultArray[i - 1];
             }
             defaultArray[index] = x;
-            System.out.println("Mảng sau khi thêm phần tử "+x+" vào vị trí: "+index+" là \n"+Arrays.toString(defaultArray));
+            System.out.println("Mảng sau khi thêm phần tử "+x+" vào vị trí: "+index+" là "+Arrays.toString(defaultArray));
         }
     }
 }
